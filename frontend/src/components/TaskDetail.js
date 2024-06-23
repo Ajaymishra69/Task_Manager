@@ -10,7 +10,7 @@ function TaskDetail() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/tasks/${id}`);
+        const response = await axios.get(`https://task-manager-woad-three.vercel.app/tasks/${id}`);
         setTask(response.data);
       } catch (error) {
         console.error('Error fetching task:', error);
@@ -21,7 +21,7 @@ function TaskDetail() {
 
   const deleteTask = async () => {
     try {
-      await axios.delete(`http://localhost:8000/tasks/${id}`);
+      await axios.delete(`https://task-manager-woad-three.vercel.app/tasks/${id}`);
       navigate('/');
     } catch (error) {
       console.error('Error deleting task:', error);
