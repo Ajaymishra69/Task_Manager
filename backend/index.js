@@ -25,7 +25,7 @@ const taskSchema = new mongoose.Schema({
 const Task = mongoose.model('Task', taskSchema);
 
 // Routes
-app.get("/", (req,res=>{
+app.get("/", (req,res)=>{
   console.log("server started");
   res.end("server started at 8000")
 }))
